@@ -437,7 +437,7 @@ class Simulator():
                 print("Failed to connect to drone. Please check that you are connected to the drone's WiFi network. If you're still having issues, please ask for help!")
 
         for command in self.command_log:
-            self.driver_instance.send_command_without_return(self.serialize_command(command))
+            self.driver_instance.send_command_with_return(self.serialize_command(command))
             
             
     # Resets the simulation state back to the beginning: no commands + landed
